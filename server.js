@@ -1,5 +1,4 @@
 const express = require('express');
-const LocusLogin = require("./route/LocusLogin");
 const locusSignup = require("./route/LocusSignup");
 const databaseconnection = require('./configuration/database');
 const app = express();
@@ -11,7 +10,6 @@ app.use(express.urlencoded({ extended: true }));
 
 
 app.use("/locusSignup", locusSignup);
-app.use("/LocusLogin", LocusLogin );
 
 
 app.get("/check" ,(req,res) =>{
